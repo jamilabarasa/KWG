@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {%block title%}Add comment{%endblock%}
+</head>
+<body>
+    {%block nav%}ADD COMMENT{%endblock%}
+    {%block content%}
+        <div class="container" id="comment">
+            <form method="POST">
+                {%csrf_token%}
+                {%for field in form%}
+                <h3>ADD COMMENT</h3><br>
+                {{field}}<br><br>
+                {%endfor%}
+                <button  type="submit" class="btn btn-info">ADD COMMENT</button>
+            </form>
+        </div>
+    {%endblock%}
+</body>
+</html>

@@ -1,0 +1,42 @@
+{%extends "base.html"%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {%block title%}Dashboard{%endblock%}
+</head>
+<body>
+    {%block nav%}DASHBOARD{%endblock%}
+    {%block content%}
+    <div class="row">
+        <div class="col-md-2">
+            <nav class="navbar" id="sidebar">
+            
+                <ul class="submenu">
+                    <li>
+                        <a href="#"><i class="fa fa-user fa-2x fa-fw"></i>Profile</a>
+                    </li>
+                    <br><br>
+                    <li>
+                        <a href="{%url 'billing'%}"><i class="fa fa-btc fa-2x fa-fw"></i>Billing</a>
+                    </li>
+                    <br><br>
+                    <li>
+                        <a href=""><i class="fa fa-bug fa-2x fa-fw"></i>Bug</a>
+                    </li>
+                    <br><br>
+                    <li>
+                        <a href=""><i class="fa fa-cog fa-2x fa-fw fa-pulse"></i>Settings</a>
+                    </li>
+                    <br><br>
+                    </ul>
+            </nav>
+        </div>
+        <div class="col-md-9">
+            {% block colcontent%}{% endblock %}
+        </div>
+    </div>
+    {%endblock%}
+</body>
+</html>

@@ -1,0 +1,41 @@
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{%static 'bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'base.css'%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{%block title%}{%endblock%}</title>
+</head>
+<body>
+    <div class="container-fluid bg-info" id="nav">
+        <nav class="navbar navbar-fixed-top">
+            <span class="navbar-brand mb-0 h1">KALULINI WELFARE GROUP {%block nav%}{%endblock%}</span>
+            {% if request.user.is_authenticated %}
+    <ul class="menu">
+    <li>
+    <a class="btn btn-outline-dark" href="{% url 'about' %}"><i class="fa fa-home fa-lg" aria-hidden="true"></i>Dashboard</a>
+    </li>
+    <li>
+    <a class="btn btn-outline-dark" href="{% url 'shownews' %}"><i class="fa fa-bell fa-lg" aria-hidden="true"></i>News</a>
+    </li>
+    <li>
+    <a class="btn btn-outline-dark" href="#"><i class="fa fa-dollar fa-lg" aria-hidden="true"></i>Payments</a>
+    </li>
+    </ul>
+    {% endif %}
+            <span class="user">
+                {% if request.user.is_authenticated %}
+                Hello {{ request.user.first_name }},
+                <a href="{% url 'logout' %}">Logout </a><span>or</span> <a href="">change password</a>
+                {% else %}
+                <a href="{% url 'login' %}">Login</a>
+                {% endif %}
+            </span>
+        </nav>
+    </div>
+    {% block content %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,26 @@
+{%extends "base.html"%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {%block title%}Latest News{%endblock%}
+</head>
+<body>
+    {%block nav%}NEWS{%endblock%}
+    {%block content%}
+    <div id="news">
+        {%for post in posts%}
+        <div class="container jumbotron bg-light">
+        <h3>{{post.subject|upper}}</h3>
+        <p class="lead">{{post.body}}</p>
+        <small><b>{{post.published}}</b></small><br>
+        <a class="btn btn-danger" href="{%url 'add_comment' pk=post.pk %}"><i class="fa fa-edit"></i>Add comment</a>
+        <a class="btn btn-success" href=""><i class="fa fa-comments"></i>Read comments</a>
+        </div>
+        {%endfor%}
+        </div>
+    </div>
+    {%endblock%}
+</body>
+</html>

@@ -1,0 +1,50 @@
+{% extends "dashboard.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {%block title%}About Kalulini welfare group{%endblock%}
+</head>
+<body>
+    {%block nav%}ABOUT{%endblock%}
+    {%block colcontent%}
+        <div class="jumbotron bg-light text-center text-info">
+            Kalulini Welfare Group was started in 2001 by the local people with the aim of helping on
+            the burial(s) of the local people.
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="card bg-danger">
+                    <p><i class="fa fa-check fa-lg"></i></p>
+                    <h3>100+</h3>
+                    <p>Burials</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card bg-info">
+                    <p><i class="fa fa-user fa-lg"></i></p>
+                    <h3>800+</h3>
+                    <p>Members</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card bg-success">
+                    <p><i class="fa fa-coffee fa-lg"></i></p>
+                    <h3>100+</h3>
+                    <p>Meetings</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card bg-secondary">
+                    <p><i class="fa fa-check fa-lg"></i></p>
+                    <h3>20+</h3>
+                    <p>Projects</p>
+                </div>
+            </div>     
+        </div>
+        
+    {%endblock%}
+</body>
+</html>

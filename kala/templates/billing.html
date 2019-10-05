@@ -1,0 +1,56 @@
+{%extends "dashboard.html"%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {%block title%}Billing{%endblock%}
+</head>
+<body>
+    {%block nav%}BILLING{%endblock%}
+    {%block colcontent%}    
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr class="text-center">
+                <th class="bg-success">Regular</th>
+                <th class="bg-success">Staff</th>
+                <th class="bg-success">Elderly</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="text-center">
+                <td>Ksh 0</td>
+                <td>Ksh 500</td>
+                <td>Ksh 0</td>
+            </tr>
+            <tr class="text-center">
+                <td>Workers</td>
+                <td>Not workers</td>
+                <td>Not workers</td>
+            </tr>
+            <tr class="text-center">
+                <td>Any age</td>
+                <td>Any age</td>
+                <td>Above 70</td>
+            </tr>
+            <tr class="text-center">
+                <td>Subscricable</td>
+                <td>Subscricable</td>
+                <td>Unsubscricable</td>
+            </tr>
+            <tr>
+                <td><a href="" class="btn btn-success btn-block">Subscribe</a></td>
+                <td><a href="" class="btn btn-success btn-block">Subscribe</a></td>
+                <td><a href="" class="btn btn-success btn-block disabled">Subscribe</a></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="row">
+        <img class="img-responsive" src="../static/images/mpesa.jpeg">
+        <img class="img-responsive" src="../static/images/equity.png">
+    </div>
+
+    {%endblock%}
+</body>
+</html>

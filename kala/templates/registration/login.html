@@ -1,0 +1,42 @@
+{%extends "base.html"%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {%block title%}Login{%endblock%}
+</head>
+
+    {%block nav%}LOGIN{%endblock%}
+    
+    {% block content %}
+    <body id="loginform">
+    <div class="container" id="login">
+    <div id="h1login">ENTER YOUR LOGIN CREDENTIALS</div>
+    {% if form.errors %}
+    <p><span style="color: red">
+    Your username and password didn't match.
+    Please try again.</span>
+    </p>
+    {% else %}
+    <hr/>
+    {% endif %}
+    <div class="login-form">
+    <form action="{% url 'login' %}" method="post">
+    {%for field in form%}
+    {{field.label_tag}}<br>
+    {{field}}<br>
+    {%endfor%}
+    {% csrf_token %}
+    <br>
+    <input type="hidden" name="next" value="{{ next }}" />
+    <button class="btn btn-info" type="submit"><i class="fa fa-sign-in"></i> Login</button>
+    <hr/>
+    </form>
+    <p><a href="">Reset password</a></p>
+    </div>
+    </div>
+    </body>
+    {% endblock %}
+</body>
+</html>

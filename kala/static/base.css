@@ -1,0 +1,80 @@
+nav{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.jumbotron{
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 30px;
+    width: 100%;
+}
+
+.jumbotron small{
+    color: rgb(233, 6, 6);
+}
+#news{
+    height: 90%;
+    overflow-y: scroll;
+}
+
+#login{
+    padding-top: 50px;
+}
+
+#loginform{
+    background: url("./images/IMG-20190910-WA0005.jpg");
+    color: white;
+}
+
+.menu li{ 
+    display: inline-block;
+    padding-top: 12px;
+}
+
+.menu a{
+    color: black;
+    padding-left: 12px;
+}
+
+.user a{
+    color: red;
+}
+
+.submenu li{ 
+    display: inline-block;
+    padding-top: 12px;
+}
+
+.submenu a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-left: 0px;
+    color: black;
+}
+
+.submenu a:active{
+    background-color: black;
+    color: aqua;
+}
+
+.column{
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    color: white;
+}
+
+.fa{
+    font-size:50px;
+}
